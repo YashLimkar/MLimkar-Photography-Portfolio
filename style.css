@@ -144,3 +144,71 @@ footer {
   color: #fff;
   margin-top: 4em;
 }
+
+.about-legacy {
+  padding: 4rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background: #1e1e1e;
+}
+
+.bio-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bio-image {
+  flex: 1 1 40%;
+  min-width: 300px;
+}
+
+.bio-text {
+  flex: 1 1 50%;
+  max-width: 700px;
+}
+
+.bio-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #d3af7f;
+}
+
+.bio-text p {
+  line-height: 1.8;
+  color: #f0e7dc;
+  margin-bottom: 1.5rem;
+}
+
+.fade-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #4b4b4b, transparent);
+  margin: 2rem 0;
+}
+
+.photo-placeholder {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.photo-father {
+  background-color: #2c3e36; /* deep jungle green */
+}
+
+.photo-yash {
+  background-color: #5c4333; /* moody bronze brown */
+}
+
+.yash-block {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .bio-block {
+    flex-direction: column !important;
+  }
+}

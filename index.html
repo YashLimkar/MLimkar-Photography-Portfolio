@@ -97,11 +97,36 @@
 
 
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>WhatsApp: +91 12345 67890</p>
-  </section>
+ <section id="contact" class="contact-section">
+  <div class="contact-container">
+    
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Direct Contact Info -->
+    <div class="contact-info">
+      <h3>Direct Contact</h3>
+      <p><strong>Email:</strong><br>
+        yashlimkar2@gmail.com<br>
+        ylimkar2000@gmail.com
+      </p>
+      <p><strong>Phone:</strong><br>
+        +91 98505 51425<br>
+        +91 74477 61425
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
   <footer>

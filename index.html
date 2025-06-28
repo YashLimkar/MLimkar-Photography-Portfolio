@@ -145,21 +145,20 @@
 
   <script src="script.js"></script>
 
-<div class="menu-icon" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+ <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuOverlay');
+      const icon = document.getElementById('menuIcon');
 
-<div class="menu-overlay" id="menuOverlay">
-  <nav>
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</div>
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        icon.classList.remove('open');
+      } else {
+        menu.style.display = 'flex';
+        icon.classList.add('open');
+      }
+    }
+  </script>
 
 </body>
 </html>

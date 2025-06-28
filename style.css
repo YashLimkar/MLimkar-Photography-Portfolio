@@ -29,32 +29,42 @@ a {
 
 /* Hero Section */
 
-.hero {
-  height: 90vh;
-  background: linear-gradient(to right, #111 60%, #333);
-  color: #fff;
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(145deg, #1b1b1b, #0f0f0f); /* Dark metal-like */
+  color: #f0e7dc;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 2em;
+  padding: 0 2rem;
+  position: relative;
 }
 
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5em;
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #d3af7f; /* brass tone */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif; /* You can later swap for a stencil or mono font */
 }
 
-
-.hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .hero-logo {
-  width: 120px;
+  width: 180px; /* previously 120px */
   height: auto;
   margin-bottom: 1.5rem;
   filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
@@ -64,6 +74,23 @@ a {
 .hero-logo:hover {
   transform: scale(1.05);
 }
+
+.hero-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #d3af7f;
+  color: #1e1e1e;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+}
+
+.hero-button:hover {
+  background-color: #b89060;
+}
+
 
 /* Navbar */
 .navbar {

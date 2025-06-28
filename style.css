@@ -316,16 +316,19 @@ footer {
 
 .whatsapp-link {
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0 4rem 0;
 }
 
 .whatsapp-icon {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  width: 36px;
+  height: 36px;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
 }
 
 .whatsapp-icon:hover {
   transform: scale(1.1);
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
 }

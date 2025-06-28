@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,27 +7,38 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-  <header class="hero-section">
-  <div class="hero-content">
-    <img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo" />
-    <h1 class="hero-tagline">Precision. Power. Poetry in Frame.</h1>
-    <div class="scroll-down">↓</div>
+
+  <!-- MENU ICON -->
+  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-</header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- OVERLAY MENU -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo" />
+      <h1 class="hero-tagline">The dignity of work, captured in light.</h1>
+      <div class="scroll-down">↓</div>
+    </div>
+  </header>
 
+  <!-- PORTFOLIO SECTION -->
   <section id="portfolio" class="portfolio">
     <h2>Portfolio</h2>
     <div class="grid">
@@ -35,117 +46,30 @@
       <img src="images/placeholder2.jpg" alt="Industrial Shot 2" class="grid-item" />
       <img src="images/placeholder3.jpg" alt="Industrial Shot 3" class="grid-item" />
       <img src="images/placeholder4.jpg" alt="Industrial Shot 4" class="grid-item" />
-      <!-- Add more as needed -->
     </div>
   </section>
 
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Legacy story and team section will go here.</p>
+  </section>
 
- <section id="about" class="about-legacy">
-  <!-- Father Section -->
-  <div class="bio-block father-block">
-    <div class="bio-image">
-      <div class="photo-placeholder photo-father">
-        <!-- Replace with <img src="images/father.jpg" alt="Mr. M. Limkar" /> when ready -->
-      </div>
-    </div>
-    <div class="bio-text">
-      <h2>The Legacy That Never Came to Light</h2>
-      <p>
-        In the corners of factories and the shadows of machines, there was a man with a camera — capturing industry not as machinery, but as movement, life, and purpose. That man was my father.
-      </p>
-      <p>
-        Mr. M. Limkar spent over 20 years photographing industrial spaces across India — long before hashtags, likes, or portfolio websites ever existed. His work spoke silently: of sweat, scale, and strength. Yet, his photographs rarely reached the audience they deserved. He created art in an era where recognition never came — only respect from those who knew.
-      </p>
-      <p>
-        As a child, I didn’t fully understand what he was building. I only knew that when he returned from a shoot, he looked fulfilled. Calm. As if he had captured something that would matter later — even if no one noticed now.
-      </p>
-      <p>
-        And now, years later, I see it clearly: my father wasn’t just a photographer — he was an archivist of dignity in work. Of men in oil-stained uniforms. Of welders mid-spark. Of motion frozen in meaning. He gave industrial spaces the kind of beauty usually reserved for temples or theaters.
-      </p>
-    </div>
-  </div>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: yashlimkar2@gmail.com, ylimkar2000@gmail.com</p>
+    <p>Phone: +91 9850551425, +91 7447761425</p>
+  </section>
 
-  <!-- Divider -->
-  <div class="fade-divider"></div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <img src="images/logo-dark.png" alt="M Limkar Logo" class="footer-logo" />
+    <p>&copy; 2025 M Limkar Photography. All rights reserved.</p>
+  </footer>
 
-  <!-- Yash Section -->
-  <div class="bio-block yash-block">
-    <div class="bio-text">
-      <p>
-        I grew up around tripods and tungsten lights, surrounded by stories my father never spoke, but silently framed. Over time, I began to see. The way he waited for light. The way he respected machines. The way he never rushed a shot. I wasn’t just learning photography. I was inheriting a philosophy.
-      </p>
-      <p>
-        Today, I carry that lens forward. My name is Yash Limkar, and I photograph industry with the same reverence — but with a new voice. I use drones, high-resolution digital systems, lighting control, and post-production tools my father never had access to. But the eye behind the camera? That comes from him.
-      </p>
-      <p>
-        This website is more than my portfolio. It’s a second chance — for his legacy to be seen, and for mine to begin.
-      </p>
-      <p>
-        For every photo I take, there’s an echo of a frame my father once envisioned. And this time, we bring it to light.
-      </p>
-      <p>
-        As a child, I watched him compose frames with obsessive detail. He’d adjust his angle for 20 minutes to capture the exact symmetry of a gearwheel in motion. He taught me to see metal not as cold, but alive — shaped by human hands, powered by human effort.
-      </p>
-      <p>
-        This site, this work, and every photo I take — it’s not just mine. It’s an echo of his vision. A second attempt at bringing into light what remained in the darkroom far too long.
-      </p>
-    </div>
-    <div class="bio-image">
-      <div class="photo-placeholder photo-yash">
-        <!-- Replace with <img src="images/yash.jpg" alt="Yash Limkar" /> when ready -->
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
- <section id="contact" class="contact-section">
-  <div class="contact-container">
-    
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <h2>Contact Us</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-
-    <!-- Direct Contact Info -->
-    <div class="contact-info">
-      <h3>Direct Contact</h3>
-      <p><strong>Email:</strong><br>
-        yashlimkar2@gmail.com<br>
-        ylimkar2000@gmail.com
-      </p>
-      <p><strong>Phone:</strong><br>
-        +91 98505 51425<br>
-        +91 74477 61425
-      </p>
-     <div class="whatsapp-inline">
-  <a href="https://wa.me/919420863925" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="whatsapp-inline-icon" />
-    <span>Chat with us on WhatsApp</span>
-  </a>
-</div>
-    </div>
-  </div>
-</section>
-
-  
-<footer class="site-footer">
-  <img src="images/logo-dark.png" alt="M Limkar Logo" class="footer-logo" />
-  <p>&copy; 2025 M Limkar Photography. All rights reserved.</p>
-</footer>
-
-
-  <script src="script.js"></script>
-
- <script>
+  <!-- TOGGLE MENU SCRIPT -->
+  <script>
     function toggleMenu() {
       const menu = document.getElementById('menuOverlay');
       const icon = document.getElementById('menuIcon');

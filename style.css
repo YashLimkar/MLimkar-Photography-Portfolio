@@ -361,3 +361,61 @@ footer {
   opacity: 0.8;
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
 }
+
+.hero-section {
+  height: 100vh;
+  background-color: #0d0d0d; /* Industrial placeholder */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+}
+
+.hero-tagline {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #ccc;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  font-size: 1.5rem;
+  color: #888;
+  animation: bounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}

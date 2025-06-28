@@ -34,6 +34,7 @@ body {
   max-width: 320px;
   height: auto;
   filter: drop-shadow(0 0 8px #000);
+  margin-bottom: 0.5rem; /* Add this if needed */
 }
 
 .hero-title {

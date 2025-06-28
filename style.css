@@ -343,3 +343,21 @@ footer {
 .whatsapp-inline a:hover .whatsapp-inline-icon {
   transform: scale(1.1);
 }
+
+/* Footer */
+.site-footer {
+  background-color: #0f0f0f;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
+}

@@ -36,6 +36,32 @@ body {
   filter: drop-shadow(0 0 8px #000);
 }
 
+.hero-title {
+  margin-top: 2rem;
+  text-align: center;
+  color: #d3af7f;
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 0 1rem;
+}
+
+.hero-title h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Hamburger Menu Icon */
 .menu-icon {
   position: absolute;

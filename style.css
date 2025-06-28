@@ -37,17 +37,18 @@ body {
 }
 
 .hero-title {
-  margin-top: 2rem;
+  margin-top: 1rem; /* reduce spacing */
   text-align: center;
   color: #d3af7f;
   animation: fadeIn 1.5s ease-in-out;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .hero-title h1 {
   font-size: 2.6rem;
   font-weight: 600;
   letter-spacing: 1px;
+  margin-top: 0; /* remove any extra top space */
 }
 
 /* Animation */

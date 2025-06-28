@@ -314,39 +314,32 @@ footer {
   }
 }
 
-/* WhatsApp Section */
-.whatsapp-section {
-  background-color: #121212;
-  color: #ccc;
+/* Whatsapp Section */
+.whatsapp-inline {
   text-align: center;
-  padding: 4rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 2rem;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
-.whatsapp-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #d3af7f; /* Brass tone to match hero section */
-  font-weight: 600;
-  letter-spacing: 1px;
+.whatsapp-inline a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #8fdd94;
+  font-weight: 500;
+  transition: transform 0.3s ease;
 }
 
-.whatsapp-section p {
-  font-size: 1rem;
-  margin-bottom: 1.2rem;
-  color: #999;
+.whatsapp-inline-icon {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
 }
 
-.whatsapp-icon {
-  width: 36px;
-  height: 36px;
-  opacity: 0.7;
-  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
-}
-
-.whatsapp-icon:hover {
+.whatsapp-inline a:hover .whatsapp-inline-icon {
   transform: scale(1.1);
-  opacity: 1;
-  filter: drop-shadow(0 0 10px rgba(37, 211, 102, 0.5));
 }

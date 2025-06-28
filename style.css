@@ -382,10 +382,11 @@ footer {
 }
 
 .hero-logo {
-  width: 120px;
+  width: 200px;
+  max-width: 80vw;
   height: auto;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.15));
 }
 
 .hero-tagline {

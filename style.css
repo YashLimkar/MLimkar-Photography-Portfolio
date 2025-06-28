@@ -28,17 +28,6 @@ a {
 
 
 /* Hero Section */
-.hero-logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.hero-logo:hover {
-  transform: scale(1.05);
-}
 
 .hero {
   height: 90vh;
@@ -64,6 +53,17 @@ a {
   max-width: 700px;
 }
 
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
 
 /* Navbar */
 .navbar {

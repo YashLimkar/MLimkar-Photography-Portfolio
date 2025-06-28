@@ -1,423 +1,189 @@
-/* Base Styles */
-body {
+/* Reset & Base */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #0d0d0d;
+  background-color: #0e0e0e;
   color: #ddd;
-  scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-h1, h2 {
-  color: #f0f0f0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* HERO SECTION */
-.hero-section {
+/* Hero Section */
+.fullscreen-intro {
   height: 100vh;
-  background-color: #0d0d0d;
+  background-color: #111;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
   text-align: center;
-  padding: 0 1.5rem;
 }
 
-.hero-content {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.8s ease-out forwards;
-  animation-delay: 0.5s;
+.logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-logo {
-  width: 200px;
-  max-width: 80vw;
+  max-width: 320px;
   height: auto;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 12px rgba(255,255,255,0.15));
+  filter: drop-shadow(0 0 8px #000);
 }
 
-.hero-tagline {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #ccc;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.scroll-down {
+/* Hamburger Menu Icon */
+.menu-icon {
   position: absolute;
-  bottom: 30px;
-  font-size: 1.5rem;
-  color: #888;
-  animation: bounce 2s infinite;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-/* Portfolio Grid */
-.portfolio {
-  padding: 4rem 2rem;
-  background-color: #111;
+/* Menu Overlay */
+.menu-overlay {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 999;
+}
+
+.menu-overlay ul {
+  list-style: none;
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+.menu-overlay li {
+  margin: 20px 0;
 }
 
-.grid-item {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  object-fit: cover;
+.menu-overlay a {
+  color: #d3af7f;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s;
 }
 
-/* About */
-.about {
+.menu-overlay a:hover {
+  color: #fff;
+}
+
+/* Contact Section */
+.contact-section {
   padding: 4rem 2rem;
   background-color: #121212;
   color: #ddd;
 }
 
-.about h2 {
+.contact-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #d3af7f;
-  margin-bottom: 3rem;
-}
-
-.about-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto 4rem auto;
-}
-
-.about-row.reverse {
-  flex-direction: row-reverse;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.about-text p {
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.about-image {
-  flex: 1;
-  height: 320px;
-  border-radius: 8px;
-  background-color: #2e2e2e;
-  border: 1px solid #333;
-}
-
-/* Divider */
-.divider {
-  width: 80%;
-  height: 1px;
-  background-color: #333;
-  margin: 4rem auto;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .about-row,
-  .about-row.reverse {
-    flex-direction: column;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-image {
-    width: 100%;
-  }
-}
-
-/* Contact */
-.contact {
-  padding: 4rem 2rem;
-  background-color: #0f0f0f;
-  color: #ccc;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  color: #d3af7f;
-  text-align: center;
   margin-bottom: 2rem;
+  color: #d3af7f;
 }
 
-.contact-wrapper {
+.contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
   justify-content: space-between;
-  align-items: flex-start;
   max-width: 1100px;
   margin: 0 auto;
+  gap: 2rem;
 }
 
-.contact-form {
+.contact-form,
+.contact-info {
   flex: 1;
   min-width: 280px;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px 15px;
-  background-color: #1a1a1a;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #1e1e1e;
   border: 1px solid #444;
-  border-radius: 6px;
-  color: #eee;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.contact-form textarea {
-  resize: vertical;
+  color: #fff;
 }
 
 .contact-form button {
+  padding: 1rem 2rem;
   background-color: #d3af7f;
-  color: #0f0f0f;
+  color: #121212;
   border: none;
-  padding: 12px;
-  font-weight: 600;
-  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .contact-form button:hover {
-  background-color: #b89263;
+  background-color: #b88c5a;
 }
 
-.contact-details {
-  flex: 1;
-  min-width: 280px;
-  max-width: 480px;
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.contact-details strong {
-  color: #d3af7f;
-  font-weight: 600;
-}
-
-.whatsapp-contact {
-  margin-top: 1rem;
-}
-
-.whatsapp-contact a {
-  display: inline-flex;
+/* WhatsApp Section */
+.whatsapp-link {
+  margin-top: 1.5rem;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  background-color: #1f1f1f;
-  border: 1px solid #333;
-  border-radius: 6px;
+  gap: 0.75rem;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1) brightness(1.5);
+}
+
+.whatsapp-link span {
   color: #d3af7f;
-  text-decoration: none;
-  transition: background 0.3s;
+  font-size: 1rem;
 }
 
-.whatsapp-contact a:hover {
-  background-color: #292929;
+/* Footer */
+.footer-dark {
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  border-top: 1px solid #333;
 }
 
-.whatsapp-contact svg {
-  width: 22px;
-  height: 22px;
-  fill: #d3af7f;
+.footer-logo {
+  max-width: 80px;
+  margin-top: 1rem;
+  filter: brightness(0.8);
 }
 
-/* Mobile-friendly */
+/* Responsive */
 @media (max-width: 768px) {
-  .contact-wrapper {
+  .menu-overlay a {
+    font-size: 1.5rem;
+  }
+
+  .contact-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-form,
-  .contact-details {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .contact-form button {
-    width: 100%;
-  }
-}
-
-
-/* Footer */
-.site-footer {
-  padding: 2rem 1rem;
-  background-color: #0d0d0d;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid #222;
-}
-
-.footer-logo {
-  width: 80px;
-  margin-bottom: 1rem;
-  filter: grayscale(100%) opacity(0.8);
-}
-
-/* Hamburger Icon */
-.menu-icon {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.menu-icon span {
-  height: 3px;
-  width: 100%;
-  background-color: #ccc;
-  border-radius: 2px;
-  transition: all 0.4s ease;
-  transform-origin: center;
-}
-
-/* Open state animation */
-.menu-icon.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.menu-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-.menu-icon.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* Overlay Menu */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(13, 13, 13, 0.95);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.menu-overlay nav ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-.menu-overlay nav ul li {
-  margin: 20px 0;
-}
-
-.menu-overlay nav ul li a {
-  font-size: 1.8rem;
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 300;
-  transition: color 0.3s ease;
-}
-
-.menu-overlay nav ul li a:hover {
-  color: #d3af7f;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .about-row,
-  .about-row.reverse {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-    font-size: 0.95rem;
-  }
-
-  .about-image {
-    max-width: 80%;
-    height: 300px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 1rem;
+  .hero-logo {
+    max-width: 220px;
   }
 
   .menu-icon {
-    top: 1rem;
-    right: 1rem;
-    transform: scale(0.9);
-  }
-
-  .menu-overlay {
-    font-size: 1.2rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 }

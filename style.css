@@ -334,10 +334,11 @@ footer {
 }
 
 .whatsapp-inline-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;   /* Try 20px instead of 24px */
+  height: 20px;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
   transition: transform 0.3s ease;
+  vertical-align: middle;
 }
 
 .whatsapp-inline a:hover .whatsapp-inline-icon {

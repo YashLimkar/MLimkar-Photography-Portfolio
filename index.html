@@ -81,7 +81,14 @@
  <section id="contact" class="contact">
   <h2>Contact</h2>
 
-  <div class="contact-wrapper">
+  <div class="contact-wrapper flipped">
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
     <div class="contact-details">
       <p><strong>Email:</strong></p>
       <p>yashlimkar2@gmail.com</p>
@@ -100,13 +107,6 @@
         </a>
       </div>
     </div>
-
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
   </div>
 </section>
 

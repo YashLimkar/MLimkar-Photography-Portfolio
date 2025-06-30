@@ -2,129 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – M Limkar Photography</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Fullscreen Header with Menu -->
- <header class="hero fullscreen-intro">
-  <div class="logo-title-wrapper animate-fade-up fade-delay-1">
-    <div class="logo-center">
-      <img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo" />
+  <!-- Hero Section -->
+  <header class="hero fullscreen-intro">
+    <div class="logo-title-wrapper animate-fade-up fade-delay-1">
+      <div class="logo-center">
+        <img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo" />
+      </div>
+      <div class="hero-title animate-fade-up fade-delay-2">
+        <h1>About Us</h1>
+      </div>
     </div>
-    <div class="hero-title animate-fade-up fade-delay-2">
-      <h1>Precision. Power. Poetry in Frame.</h1>
-    </div>
+  </header>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <!-- Overlay Navigation Menu -->
+  <div id="menuOverlay" class="menu-overlay">
+    <div class="close-icon" onclick="toggleMenu()">×</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
-
-  <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">☰</div>
-</header>
-
-  <!-- Menu Overlay -->
-  <!-- Navigation Bar (Responsive with working hamburger menu) -->
-<nav class="bg-[#121212] text-white px-6 py-4">
-  <div class="flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index.html">
-      <img src="images/logo-dark.png" alt="M Limkar Logo" class="h-20" />
-    </a>
-
-    <!-- Hamburger Icon (visible on mobile only) -->
-    <button id="menuToggle" class="sm:hidden focus:outline-none">
-      <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-    <!-- Desktop Nav Links -->
-    <div class="hidden sm:flex space-x-8 text-lg font-medium">
-      <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
-      <a href="about.html" class="text-gray-300 hover:text-white transition">About</a>
-      <a href="portfolio.html" class="text-white underline underline-offset-4">Portfolio</a>
-      <a href="contact.html" class="text-gray-300 hover:text-white transition">Contact</a>
-    </div>
-  </div>
-
-  <!-- Mobile Nav Links -->
-  <div id="mobileMenu" class="sm:hidden hidden flex-col mt-4 space-y-4 text-lg font-medium">
-    <a href="index.html" class="block text-gray-300 hover:text-white">Home</a>
-    <a href="about.html" class="block text-gray-300 hover:text-white">About</a>
-    <a href="portfolio.html" class="block text-white underline underline-offset-4">Portfolio</a>
-    <a href="contact.html" class="block text-gray-300 hover:text-white">Contact</a>
-  </div>
-</nav>
-
-<!-- Script for toggling mobile menu -->
-<script>
-  const toggleBtn = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
 
   <!-- About Section -->
- <section class="about-section">
+  <section class="about-section">
+    <h2>Our Story</h2>
 
-  <!-- M. Limkar Section -->
-  <div class="about-block block-dark">
-    <div class="about-image-full father-bg"></div>
-    <div class="about-text-block">
-      <div class="about-text-inner" data-aos="fade-up" data-aos-delay="100">
-        <p>In the corners of factories and the shadows of machines, there was a man with a camera — capturing industry not as machinery, but as movement, life, and purpose. That man was my father.</p>
-        <p>Mr. M. Limkar spent over 20 years photographing industrial spaces across India — long before hashtags, likes, or portfolio websites ever existed. His work spoke silently: of sweat, scale, and strength. Yet, his photographs rarely reached the audience they deserved. He created art in an era where recognition never came — only respect from those who knew.</p>
-        <p>As a child, I didn’t fully understand what he was building. I only knew that when he returned from a shoot, he looked fulfilled. Calm. As if he had captured something that would matter later — even if no one noticed now.</p>
+    <div class="about-row">
+      <div class="about-text">
+        <p>M Limkar Photography was born out of a passion for capturing the industrial world in its most powerful, precise, and poetic form. With years of experience working with engineering giants and manufacturing marvels, we turn metal, motion, and machines into visual storytelling.</p>
+      </div>
+      <div class="about-image">
+        Industrial Vision in Focus
       </div>
     </div>
-  </div>
 
-  <!-- Divider -->
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- Yash Limkar Section -->
-  <div class="about-block block-light">
-    <div class="about-image-full yash-bg"></div>
-    <div class="about-text-block">
-      <div class="about-text-inner" data-aos="fade-up" data-aos-delay="100">
-        <p>I grew up around tripods and tungsten lights, surrounded by stories my father never spoke, but silently framed. Over time, I began to see. The way he waited for light. The way he respected machines. The way he never rushed a shot. I wasn’t just learning photography. I was inheriting a philosophy.</p>
-        <p>And now, years later, I see it clearly: my father wasn’t just a photographer — he was an archivist of dignity in work. Of men in oil-stained uniforms. Of welders mid-spark. Of motion frozen in meaning. He gave industrial spaces the kind of beauty usually reserved for temples or theaters.</p>
-        <p>Today, I carry that lens forward. My name is Yash Limkar, and I photograph industry with the same reverence — but with a new voice. I use drones, high-resolution digital systems, lighting control, and post-production tools my father never had access to. But the eye behind the camera? That comes from him.</p>
-        <p>This website is more than my portfolio. It’s a second chance — for his legacy to be seen, and for mine to begin.</p>
+    <div class="about-row reverse">
+      <div class="about-text">
+        <p>We’ve partnered with industry leaders like Mercedes, Mahindra, Tata, Bosch, and many more to deliver visuals that reflect excellence. Whether it’s a towering plant or a micro-engineered component, we showcase the soul of your operation.</p>
+      </div>
+      <div class="about-image">
+        Trusted by Engineering Icons
       </div>
     </div>
-  </div>
 
-</section>
+    <div class="divider"></div>
 
+    <div class="about-row">
+      <div class="about-text">
+        <p>Based in India, our reach is global. Our work blends technical understanding with artistic precision to help your brand stand tall in brochures, websites, trade fairs, and beyond.</p>
+      </div>
+      <div class="about-image">
+        Precision. Power. Poetry.
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer-dark">
-    <p>&copy; 2025 M Limkar Photography. All Rights Reserved.</p>
-    <img src="images/logo-dark.png" alt="Footer Logo" class="footer-logo" />
+    <p>&copy; 2025 M Limkar Photography</p>
+    <img src="images/logo-dark.png" alt="Logo" class="footer-logo" />
   </footer>
 
-  <!-- JavaScript for Menu Toggle -->
+  <!-- JavaScript -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menuOverlay');
-      const icon = document.getElementById('menuIcon');
-
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-        icon.classList.remove('open');
-        icon.innerHTML = '☰';
-      } else {
-        menu.style.display = 'flex';
-        icon.classList.add('open');
-        icon.innerHTML = '✖';
-      }
+      menu.classList.toggle('show');
     }
   </script>
 

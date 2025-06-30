@@ -448,17 +448,27 @@ button:hover {
   margin-top: 1rem;
   filter: brightness(0.8);
 }
-.top-left-logo {
+
+.logo-top-left {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .small-logo {
-  max-width: 144px;
+  max-width: 90px;
   height: auto;
 }
+
+.portfolio-tagline {
+  font-size: 1.1rem;
+  color: #d3af7f;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

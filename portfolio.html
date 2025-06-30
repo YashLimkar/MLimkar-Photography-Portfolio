@@ -5,44 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio – M Limkar Photography</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Hero Section -->
   <header class="hero fullscreen-intro">
+    <!-- Small Logo in top-left corner -->
+    <div class="top-left-logo">
+      <a href="index.html">
+        <img src="images/logo-dark.png" alt="M Limkar Logo" class="small-logo" />
+      </a>
+    </div>
+    
     <div class="logo-title-wrapper animate-fade-up fade-delay-1">
-      <div class="logo-center top-left-logo">
-        <a href="index.html"><img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo small-logo" /></a>
-      </div>
       <div class="hero-title animate-fade-up fade-delay-2">
         <h1>Portfolio</h1>
       </div>
     </div>
+
     <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">☰</div>
   </header>
-
-  <!-- Overlay Navigation Menu -->
-  <div id="menuOverlay" class="menu-overlay">
-    <div class="close-icon" onclick="toggleMenu()">×</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
 
   <!-- Navigation Bar -->
   <nav class="bg-[#121212] text-white px-6 py-4">
     <div class="flex justify-between items-center">
+      <!-- No logo here to avoid duplication -->
+
+      <!-- Hamburger Icon -->
       <button id="menuToggle" class="sm:hidden focus:outline-none">
         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
+      <!-- Desktop Links -->
       <div class="hidden sm:flex space-x-8 text-lg font-medium">
         <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
         <a href="about.html" class="text-gray-300 hover:text-white transition">About</a>
@@ -51,7 +48,7 @@
       </div>
     </div>
 
-    <!-- Mobile Nav Links -->
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="sm:hidden hidden flex-col mt-4 space-y-4 text-lg font-medium">
       <a href="index.html" class="block text-gray-300 hover:text-white">Home</a>
       <a href="about.html" class="block text-gray-300 hover:text-white">About</a>
@@ -60,44 +57,32 @@
     </div>
   </nav>
 
-  <!-- Portfolio Gallery Placeholder -->
+  <!-- Portfolio Content Section -->
   <section class="about-section">
-    <h2 style="text-align: center; color: #d3af7f;">Our Work</h2>
-    <div style="text-align: center; margin-top: 2rem; color: #888;">
-      <p>A curated collection of my finest industrial visuals. Coming soon.</p>
-    </div>
-  </section>
+    <h2 class="animate-fade-up fade-delay-1">Our Work</h2>
+    <p class="animate-fade-up fade-delay-2" style="text-align: center; margin-bottom: 2rem;">A curated collection of my finest industrial visuals. Coming soon.</p>
 
   <!-- Footer -->
   <footer class="footer-dark">
-    <p>&copy; 2025 M Limkar Photography. All Rights Reserved.</p>
-    <img src="images/logo-dark.png" alt="Footer Logo" class="footer-logo" />
+    <p>&copy; 2025 M Limkar Photography</p>
+    <img src="images/logo-dark.png" alt="Logo" class="footer-logo" />
   </footer>
 
   <!-- JavaScript -->
   <script>
     const toggleBtn = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
+
+    toggleBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
     function toggleMenu() {
-      const menu = document.getElementById('menuOverlay');
-      const icon = document.getElementById('menuIcon');
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-        icon.classList.remove('open');
-        icon.innerHTML = '☰';
-      } else {
-        menu.style.display = 'flex';
-        icon.classList.add('open');
-        icon.innerHTML = '✖';
-      }
-      menu.classList.toggle('show');
+      const menuIcon = document.getElementById('menuIcon');
+      const mobile = document.getElementById('mobileMenu');
+      mobile.classList.toggle('hidden');
     }
   </script>
+
 </body>
 </html>

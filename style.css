@@ -1,4 +1,3 @@
-/* Reset + Base Typography */
 * {
   margin: 0;
   padding: 0;
@@ -23,34 +22,26 @@ h1, h2 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2rem;
+  text-align: center;
 }
 
 h2 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 4rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 section {
-  padding: 4rem 1.5rem;
+  padding: 8rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 5rem 1.5rem 2rem;
-  background-color: #0f0f0f;
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .logo {
@@ -63,34 +54,51 @@ a {
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-/* Scroll Rotate Section */
-.scroll-rotate {
-  background-color: #121212;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   text-align: center;
+  padding: 5rem 1.5rem 2rem;
+  background-color: #0f0f0f;
+}
+
+.hero-bg {
+  background: url('assets/textures/your-texture.jpg') center / cover no-repeat fixed;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  border-bottom: 2px solid #888;
+  border-right: 2px solid #888;
+  transform: rotate(45deg);
+  animation: scrollDown 1.5s infinite;
+}
+
+@keyframes scrollDown {
+  0%, 100% { opacity: 0; transform: rotate(45deg) translate(0, 0); }
+  50% { opacity: 1; transform: rotate(45deg) translate(0, 10px); }
 }
 
 .rotation-container {
   display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 2rem 0;
-  scrollbar-width: none;
-}
-
-.rotation-container::-webkit-scrollbar {
-  display: none;
-}
-
-.rotate-frame {
-  max-width: 300px;
-  height: auto;
-  flex: 0 0 auto;
-  border: 2px solid #2a2a2a;
-  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
 .rotate-frame {
@@ -105,30 +113,6 @@ a {
   display: block;
 }
 
-.rotation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Portfolio Grid */
-#portfolio .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-#portfolio img {
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-#portfolio img:hover {
-  transform: scale(1.02);
-}
-
-/* About Section */
 .about-text {
   font-size: 1.05rem;
   color: #ccc;
@@ -136,49 +120,4 @@ a {
   text-align: justify;
   max-width: 900px;
   margin: 2rem auto 0;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #151515;
-  text-align: center;
-  color: #aaa;
-  padding: 4rem 1.5rem;
-}
-
-#contact p {
-  font-size: 1.05rem;
-  margin-top: 1rem;
-  line-height: 1.6;
-}
-
-/* Responsive Tweaks */
-@media screen and (max-width: 768px) {
-  .logo {
-    max-width: 160px;
-  }
-
-  .rotation-container {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-}
-
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

@@ -159,7 +159,6 @@ p {
 .footer-logo {
   width: 100px;
   margin-bottom: 20px;
-  filter: brightness(0) invert(1); /* makes dark logo white-like on dark background */
 }
 
 /* GENERAL SECTION CENTERING */

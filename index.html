@@ -2,271 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>M Limkar Photography – Industrial Legacy</title>
-  <meta name="description" content="Precision. Power. Poetry in Frame. A cinematic, scroll-driven experience of industrial photography.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #181818;
-      color: #ebebeb;
-      overflow-x: hidden;
-    }
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      width: 100%;
-      padding: 36px 0 0 0;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 2.2rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      display: inline-block;
-      color: #ebebeb;
-      text-decoration: none;
-    }
-    nav {
-      margin-bottom: 30px;
-    }
-    nav a {
-      color: #ebebeb;
-      text-decoration: none;
-      font-weight: 400;
-      font-size: 1.08rem;
-      margin: 0 17px;
-      padding: 3px 7px;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-    nav a:hover {
-      background: #232526;
-    }
-    .hero {
-      position: relative;
-      width: 100vw;
-      height: 90vh;
-      min-height: 420px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 1;
-    }
-    .parallax-bg {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 120%;
-      background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80');
-      background-size: cover;
-      background-position: center;
-      z-index: 1;
-      will-change: transform;
-      transition: opacity 0.5s;
-      opacity: 0.58;
-      filter: grayscale(0.8) contrast(1.15) brightness(0.85);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-top: 3vh;
-    }
-    .tagline {
-      font-size: 2.3rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-align: center;
-      margin-bottom: 18px;
-      color: #fff;
-      text-shadow: 0 6px 32px rgba(0,0,0,0.22);
-      line-height: 1.1;
-      max-width: 95vw;
-    }
-    .subtitle {
-      font-size: 1.3rem;
-      color: #cacaca;
-      text-align: center;
-      margin-bottom: 44px;
-      max-width: 600px;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.10);
-      font-weight: 400;
-    }
-    .cta {
-      display: inline-block;
-      background: #ebebeb;
-      color: #181818;
-      font-weight: 700;
-      padding: 15px 36px;
-      border-radius: 28px;
-      font-size: 1.08rem;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.20);
-      margin-bottom: 20px;
-    }
-    .cta:hover {
-      background: #cacaca;
-      color: #181818;
-    }
-    main {
-      flex: 1;
-      width: 100%;
-      margin: 0 auto;
-      background: none;
-      z-index: 2;
-      position: relative;
-      padding-top: 50px;
-    }
-    .work-section {
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto 60px auto;
-      padding: 0 20px;
-    }
-    .work-title {
-      font-size: 1.28rem;
-      font-weight: 700;
-      margin-bottom: 32px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #ebebeb;
-    }
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 34px;
-    }
-    .work-item {
-      background: #232526;
-      border-radius: 13px;
-      box-shadow: 0 0 18px rgba(0,0,0,0.10);
-      padding: 24px;
-      transition: box-shadow 0.2s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-decoration: none;
-      color: inherit;
-      overflow: hidden;
-      position: relative;
-    }
-    .work-item:hover {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.20);
-      transform: translateY(-2px) scale(1.025);
-    }
-    .work-img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      background: #363636;
-      aspect-ratio: 16/10;
-      object-fit: cover;
-      filter: grayscale(0.7) contrast(1.08);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.16);
-      transition: filter 0.2s;
-    }
-    .work-item:hover .work-img {
-      filter: grayscale(0.4) contrast(1.18);
-    }
-    .work-name {
-      font-weight: 700;
-      font-size: 1.13rem;
-      margin-bottom: 7px;
-      color: #ebebeb;
-      letter-spacing: 0.01em;
-    }
-    .work-desc {
-      font-size: 1rem;
-      color: #cacaca;
-    }
-    footer {
-      text-align: center;
-      color: #8c8c8c;
-      padding: 34px 0 18px 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.01em;
-      background: none;
-      z-index: 10;
-      position: relative;
-    }
-    @media (max-width: 700px) {
-      .logo { font-size: 1.25rem; }
-      .hero { height: 60vh; min-height: 300px; }
-      .tagline { font-size: 1.12rem; }
-      .subtitle { font-size: 0.97rem; }
-      .work-title { font-size: 0.98rem; }
-      .work-section { margin-top: 12px; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLimkar Photography</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <a href="#" class="logo">M Limkar Photography</a>
-    <nav>
-      <a href="#">Portfolio</a>
-      <a href="#">Legacy</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <div class="parallax-bg" id="parallax-bg"></div>
-    <div class="hero-content">
-      <div class="tagline">Precision. Power. Poetry in Frame.</div>
-      <div class="subtitle">
-        A cinematic, scroll-driven tribute to the artistry and legacy of industrial photography.
-      </div>
-      <a href="#" class="cta">Explore Portfolio</a>
+  <!-- Welcome Section -->
+  <section class="welcome fullscreen">
+    <div class="logo-center">
+      <img src="images/logo-dark.png" alt="M Limkar Logo" class="hero-logo" />
+    </div>
+    <h1 class="tagline">Precision. Power. Poetry in Frame.</h1>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p class="subtitle">A curated collection of my finest industrial visuals. Coming soon.</p>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <div class="about-text">
+      <p>In the corners of factories and the shadows of machines, there was a man with a camera — capturing industry not as machinery, but as movement, life, and purpose. That man was my father.</p>
+      <p>Mr. M. Limkar spent over 20 years photographing industrial spaces across India — long before hashtags, likes, or portfolio websites ever existed. His work spoke silently: of sweat, scale, and strength. Yet, his photographs rarely reached the audience they deserved. He created art in an era where recognition never came — only respect from those who knew.</p>
+      <p>As a child, I didn’t fully understand what he was building. I only knew that when he returned from a shoot, he looked fulfilled. Calm. As if he had captured something that would matter later — even if no one noticed now.</p>
+      <p>I grew up around tripods and tungsten lights, surrounded by stories my father never spoke, but silently framed. Over time, I began to see. The way he waited for light. The way he respected machines. The way he never rushed a shot. I wasn’t just learning photography. I was inheriting a philosophy.</p>
+      <p>And now, years later, I see it clearly: my father wasn’t just a photographer — he was an archivist of dignity in work. Of men in oil-stained uniforms. Of welders mid-spark. Of motion frozen in meaning. He gave industrial spaces the kind of beauty usually reserved for temples or theaters.</p>
+      <p>Today, I carry that lens forward. My name is Yash Limkar, and I photograph industry with the same reverence — but with a new voice. I use drones, high-resolution digital systems, lighting control, and post-production tools my father never had access to. But the eye behind the camera? That comes from him.</p>
+      <p>This website is more than my portfolio. It’s a second chance — for his legacy to be seen, and for mine to begin.</p>
     </div>
   </section>
-  <main>
-    <section class="work-section">
-      <div class="work-title">Featured Works</div>
-      <div class="work-grid">
-        <a href="#" class="work-item">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Factory Floor" class="work-img">
-          <div class="work-name">Factory Floor</div>
-          <div class="work-desc">Cinematic portraits of machines at work and the people who run them.</div>
-        </a>
-        <a href="#" class="work-item">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Steel & Light" class="work-img">
-          <div class="work-name">Steel & Light</div>
-          <div class="work-desc">Industrial spaces transformed by dramatic lighting and perspective.</div>
-        </a>
-        <a href="#" class="work-item">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Precision in Motion" class="work-img">
-          <div class="work-name">Precision in Motion</div>
-          <div class="work-desc">Capturing the poetry of manufacturing processes in motion.</div>
-        </a>
-      </div>
-    </section>
-  </main>
+
+  <!-- Our Team Section -->
+  <section id="team" class="section">
+    <h2>Our Team</h2>
+    <p>Coming soon.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: yashlimkar2@gmail.com</p>
+    <p>Phone: +91 7447761425</p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 M Limkar Photography. Legacy in every frame.
+    <p>&copy; 2025 MLimkar Photography. All rights reserved.</p>
   </footer>
-  <script>
-    // Simple parallax effect for hero background
-    const parallax = document.getElementById('parallax-bg');
-    window.addEventListener('scroll', function() {
-      const scrolled = window.scrollY;
-      parallax.style.transform = 'translateY(' + (scrolled * 0.25) + 'px)';
-    });
-  </script>
 </body>
 </html>

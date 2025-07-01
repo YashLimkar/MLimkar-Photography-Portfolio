@@ -1,7 +1,7 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+// Scroll to top on reload
+window.onbeforeunload = () => window.scrollTo(0, 0);
 
+// Fade-in sections on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -9,11 +9,9 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
+document.querySelectorAll("section").forEach((section) => observer.observe(section));
 
-document.querySelectorAll("section").forEach((section) => {
-  observer.observe(section);
-});
-
+// Scroll-based image rotation
 const machineSection = document.getElementById("machine-scroll");
 const frames = document.querySelectorAll(".rotate-frame");
 

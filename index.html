@@ -2,62 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M Limkar Photography</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    .parallax-wrapper {
+      position: relative;
+      height: 300vh;
+      perspective: 1px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .parallax-group {
+      position: relative;
+      height: 100vh;
+      transform-style: preserve-3d;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .layer-back {
+      transform: translateZ(-2px) scale(3);
+      background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+    }
+
+    .layer-middle {
+      transform: translateZ(-1px) scale(2);
+      background-image: url('https://images.unsplash.com/photo-1501769214405-5e86fbf3b1fc');
+    }
+
+    .layer-front {
+      transform: translateZ(0);
+      background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b');
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .hero-text img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <img src="assets/logo/mlimkar-logo.png" alt="M Limkar Logo" class="logo" />
-    <div class="tagline">Precision. Power. Poetry in Frame.</div>
-    <div class="hero-bg"></div>
-  </header>
-
-  <!-- Scroll-Based Machine Rotation Section -->
-  <section id="machine-scroll" class="scroll-rotate">
-    <h2>Engineering in Motion</h2>
-    <div class="rotation-container">
-      <img src="https://images.unsplash.com/photo-1615392573614-6e2bd0514309" alt="Machine Frame 1" class="rotate-frame" />
-      <img src="https://images.unsplash.com/photo-1615392574185-b9a7a2a7f14a" alt="Machine Frame 2" class="rotate-frame" />
-      <img src="https://images.unsplash.com/photo-1615392574306-2c8ef2c5d684" alt="Machine Frame 3" class="rotate-frame" />
-      <img src="https://images.unsplash.com/photo-1615392574474-6cc7db709c3c" alt="Machine Frame 4" class="rotate-frame" />
-      <img src="https://images.unsplash.com/photo-1615392574597-63b12827a087" alt="Machine Frame 5" class="rotate-frame" />
+  <div class="parallax-wrapper">
+    <div class="parallax-group">
+      <div class="parallax-layer layer-back"></div>
+      <div class="parallax-layer layer-middle"></div>
+      <div class="parallax-layer layer-front"></div>
+      <div class="hero-text">
+        <img src="assets/logos/mlimkar-logo.png" alt="M Limkar Photography Logo">
+        <h1>Precision. Power. Poetry in Frame.</h1>
+      </div>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About</h2>
-    <div class="about-text">
-      In the corners of factories and the shadows of machines, there was a man with a camera — capturing industry not as machinery, but as movement, life, and purpose. That man was my father.<br/><br/>
-
-      Mr. M. Limkar spent over 20 years photographing industrial spaces across India — long before hashtags, likes, or portfolio websites ever existed. His work spoke silently: of sweat, scale, and strength. Yet, his photographs rarely reached the audience they deserved. He created art in an era where recognition never came — only respect from those who knew.<br/><br/>
-
-      As a child, I didn’t fully understand what he was building. I only knew that when he returned from a shoot, he looked fulfilled. Calm. As if he had captured something that would matter later — even if no one noticed now.<br/><br/>
-
-      I grew up around tripods and tungsten lights, surrounded by stories my father never spoke, but silently framed. Over time, I began to see. The way he waited for light. The way he respected machines. The way he never rushed a shot. I wasn’t just learning photography. I was inheriting a philosophy.<br/><br/>
-
-      Today, I carry that lens forward. My name is Yash Limkar, and I photograph industry with the same reverence — but with a new voice. I use drones, high-resolution digital systems, lighting control, and post-production tools my father never had access to. But the eye behind the camera? That comes from him.<br/><br/>
-
-      This website is more than my portfolio. It’s a second chance — for his legacy to be seen, and for mine to begin.
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 yashlimkar2@gmail.com</p>
-    <p>📞 +91 74477 61425</p>
-    <p>📍 Pune, India</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 M Limkar Photography. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  </div>
 </body>
 </html>

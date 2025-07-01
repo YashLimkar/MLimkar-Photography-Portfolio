@@ -150,10 +150,16 @@ p {
 .footer {
   background: #111;
   color: #fff;
-  padding: 50px 0;
+  padding: 60px 0;
   text-align: center;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
+}
+
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1); /* makes dark logo white-like on dark background */
 }
 
 /* GENERAL SECTION CENTERING */

@@ -1,31 +1,15 @@
-// Scroll to top on reload
-window.onbeforeunload = () => window.scrollTo(0, 0);
+// Scroll to top on reload (optional)
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
-// Fade-in sections on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-});
-document.querySelectorAll("section").forEach((section) => observer.observe(section));
+// Add fade-in effect for hero-text if needed
+window.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero-text");
+  hero.style.opacity = 0;
+  hero.style.transition = "opacity 1.5s ease";
 
-// Scroll-based image rotation
-const machineSection = document.getElementById("machine-scroll");
-const frames = document.querySelectorAll(".rotate-frame");
-
-window.addEventListener("scroll", () => {
-  const sectionTop = machineSection.offsetTop;
-  const sectionHeight = machineSection.offsetHeight;
-  const scrollY = window.scrollY;
-
-  if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-    const relativeY = scrollY - sectionTop;
-    const frameIndex = Math.floor((relativeY / sectionHeight) * frames.length);
-
-    frames.forEach((img, index) => {
-      img.style.display = index === frameIndex ? "block" : "none";
-    });
-  }
+  setTimeout(() => {
+    hero.style.opacity = 1;
+  }, 300);
 });

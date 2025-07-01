@@ -93,6 +93,24 @@ a {
   border-radius: 4px;
 }
 
+.rotate-frame {
+  display: none;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.rotate-frame:first-child {
+  display: block;
+}
+
+.rotation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Portfolio Grid */
 #portfolio .gallery {
   display: grid;

@@ -1,9 +1,7 @@
-// 1. Scroll-to-top on reload (optional but feels premium)
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-// 2. Scroll-triggered fade-ins
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -16,7 +14,6 @@ document.querySelectorAll("section").forEach((section) => {
   observer.observe(section);
 });
 
-// 3. Scroll-based frame toggle for machine section using multiple <img> tags
 const machineSection = document.getElementById("machine-scroll");
 const frames = document.querySelectorAll(".rotate-frame");
 

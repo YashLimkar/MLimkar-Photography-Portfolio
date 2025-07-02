@@ -87,9 +87,41 @@ p {
 }
 
 .hero-logo {
-  width: 340px;  /* Increased from 160px */
+  width: 340px;
   margin-bottom: 30px;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+  transition: filter 0.3s ease;
+}
+.hero-logo:hover {
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.35));
+}
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* This is the radial glow/mask */
+.logo-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+/* Logo always stays on top */
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+  transition: filter 0.3s ease;
 }
 
 .tagline {

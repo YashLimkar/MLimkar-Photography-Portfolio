@@ -267,7 +267,12 @@ img {
 .footer {
   background-color: #111;
   padding: 40px 20px;
-  width: 100%;
+  width: 100vw;           /* Ensure full screen width */
+  margin: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .footer-content {

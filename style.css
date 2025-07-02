@@ -213,6 +213,52 @@ img {
   text-decoration: underline;
 }
 
+/* Stylized contact info block */
+.fancy-contact {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 400px;
+  padding-left: 40px;
+  text-align: left;
+  color: #222;
+}
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-heading h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-info strong {
+  color: #000;
+}
+
+/* Decorative line to the left of heading */
+.contact-heading .line {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  background-color: #222;
+}
+
+/* WhatsApp link styles (already added earlier, just repeating here for reference) */
 .whatsapp-link {
   display: flex;
   align-items: center;
@@ -226,6 +272,7 @@ img {
 .whatsapp-icon {
   font-size: 1.4rem;
 }
+
 
 /* Footer */
 .footer {

@@ -71,6 +71,15 @@ p {
   z-index: 0;
   transition: transform 0.2s ease-out;
 }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* 50% black overlay */
+  z-index: 1;
+}
 
 /* Content Layout */
 .hero-content {

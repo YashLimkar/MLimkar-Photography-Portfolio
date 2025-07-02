@@ -304,4 +304,27 @@ img {
   .about-text {
     font-size: 1rem;
   }
+  .contact-container {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-form-wrapper,
+.contact-info {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.contact-heading {
+  justify-content: center;
+}
+
+.contact-heading h3 {
+  margin-left: 10px;
+}
+
+.contact-info {
+  padding: 0 10px;
+}
+
 }

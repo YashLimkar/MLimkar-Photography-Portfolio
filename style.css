@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  color: #fff;
-  background-color: #000;
+  color: #111; /* deep grey text */
+  background-color: #f4f1ed; /* warm grey background */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -123,7 +123,7 @@ img {
 
 .section-subtitle {
   font-size: 1.25rem;
-  color: #ccc;
+  color: #444;
   margin-bottom: 40px;
 }
 
@@ -132,7 +132,7 @@ img {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #ddd;
+  color: #333;
   text-align: justify;
   max-width: 850px;
   margin: 0 auto;
@@ -192,7 +192,7 @@ img {
 
 .footer p {
   font-size: 0.95rem;
-  color: #aaa;
+  color: #666;
 }
 
 /* Responsive Tweaks */

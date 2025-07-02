@@ -276,20 +276,26 @@ img {
 
 /* Footer */
 .footer {
-  padding: 40px 20px;
   background-color: #111;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .footer-logo {
   width: 120px;
   margin: 0 auto 15px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .footer p {
   font-size: 0.95rem;
-  color: #666;
+  color: #aaa;
 }
 
 /* Responsive Tweaks */

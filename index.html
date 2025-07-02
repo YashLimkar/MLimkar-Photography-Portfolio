@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MLimkar Photography</title>
+  <title>M Limkar Photography</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
- <!-- Welcome Section -->
-<section class="welcome fullscreen">
-  <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <div class="logo-wrapper">
-      <div class="logo-background"></div>
-      <img src="assets/logo/mlimkar-logo.png" alt="M Limkar Logo" class="hero-logo" />
+  <!-- Welcome Section -->
+  <section class="welcome fullscreen">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <div class="logo-wrapper">
+        <div class="logo-background"></div>
+        <img src="assets/mlimkar-logo.png" alt="M Limkar Logo" class="hero-logo" />
+      </div>
+      <h1 class="tagline">Precision. Power. Poetry in Frame.</h1>
     </div>
-    <h1 class="tagline">Precision. Power. Poetry in Frame.</h1>
-  </div>
-</section>
+  </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <p class="subtitle">A curated collection of my finest industrial visuals. Coming soon.</p>
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="section-subtitle">A curated collection of my finest industrial visuals.</p>
+      <!-- Portfolio items will be added later -->
+    </div>
   </section>
 
   <!-- About Us Section -->
@@ -44,41 +47,42 @@
 
   <!-- Our Team Section -->
   <section id="team" class="section">
-    <h2>Our Team</h2>
-    <p>Coming soon.</p>
+    <div class="container">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">A small but dedicated crew behind every shot.</p>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: yashlimkar2@gmail.com</p>
-    <p>Phone: +91 7447761425</p>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-  <div class="container center-text">
-    <img src="assets/logo/mlimkar-logo2.png" alt="M Limkar Logo" class="footer-logo" />
-    <p>&copy; 2025 M Limkar Photography. All rights reserved.</p>
-  </div>
-</footer>
+    <div class="footer-content">
+      <img src="assets/mlimkar-logo.png" alt="Footer Logo" class="footer-logo" />
+      <p>&copy; 2025 M Limkar Photography. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <!-- Parallax Scroll Script -->
   <script>
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const bg = document.querySelector('.hero-bg');
-    if (bg) {
-      bg.style.transform = `translateY(${scrollY * 0.2}px) scale(1.05)`;
-    }
-  });
-</script>
-
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const bg = document.querySelector('.hero-bg');
+      if (bg) {
+        bg.style.transform = `translateY(${scrollY * 0.2}px) scale(1.05)`;
+      }
+    });
+  </script>
 </body>
 </html>
-
